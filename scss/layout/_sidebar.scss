@@ -1,0 +1,71 @@
+#tracking{
+    .sidebar{
+        @include side-bar;
+            background-color: $table-layer-gray;
+            border-radius: 0px 8px 0px 0px;
+            border-right: 1px solid #1D1C1E;
+        
+            .sidebar-container{
+                img{
+                    margin-right: 8px;
+                }
+                a{
+                    transition: 0.2s;
+                }
+                a:hover{
+                    background-color: rgb(49, 49, 49);
+                    border-radius: 5px;
+                }
+                @include side-bar-container;
+                color: $white-color;
+                .logo-box{
+                    @include center-items;
+                    margin-bottom: 47px;
+                    gap:16px;
+                    h2{
+                        @include logo-text-format;
+                    }
+                }
+
+                .general-part{
+                    @include for-size(mobile){
+                        display: none
+                    }
+                    h4{
+                        @include sidebar-section-text-format;
+                    }
+                    .general-items{
+                        @include sidebar-items-style;
+                        
+                        a{
+                            @include side-bar-text-format;
+                        }
+                        .active {
+                            background-color: rgb(49, 49, 49);
+                            border-radius: 5px;
+                            cursor:context-menu;
+                        }
+                        
+                    }
+                }
+                .support-part{
+                    @include for-size(mobile){
+                        display: none
+                    }
+                    margin-top: 24px;
+                    .support-items{
+                        @include sidebar-items-style;
+                    }
+                    a{
+                        @include side-bar-text-format;
+                        
+                    }
+                    
+                    h4{
+                       @include sidebar-section-text-format;
+                    }
+                   
+                }
+            }
+    }
+}
