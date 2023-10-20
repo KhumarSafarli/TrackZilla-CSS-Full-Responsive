@@ -1,0 +1,11 @@
+@mixin for-size($screen) {
+    @if $screen == tablet {
+      @media screen and (max-width: $desktop-container-width) {
+        @content;
+      }
+    } @else if $screen == mobile {
+      @media screen and (max-width: $tablet-container-width) {
+        @content;
+      }
+    }
+  }
