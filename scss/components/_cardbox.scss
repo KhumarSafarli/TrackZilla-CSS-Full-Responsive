@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    @include card-design;
+
+    p {
+        @include center-items;
+        
+        @include card-header-text;
+
+    }
+}
+header{
+   @include center-items;
+   justify-content: space-around;
+}
+
+footer{
+    @include center-all-elements;
+    transform: translateY(50px);
+}
