@@ -3,4 +3,11 @@
     url("../../assets/background/top-left.png"),url("../../assets/background/top-right.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
+  width: $desktop-container-width;
+  height: 100vh;
+
+  @include for-size (tablet){
+    width: 428px;
+  }
 }
