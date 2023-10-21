@@ -1,71 +1,108 @@
-#tracking{
-    .sidebar{
+#tracking {
+    .sidebar {
+        .burger-menu {
+            display: none;
+
+            @include for-size(tablet) {
+                display: none;
+               
+            }
+
+            @include for-size(mobile) {
+                display: initial;
+                cursor: pointer;
+            }
+        }
+
         @include side-bar;
-            background-color: $table-layer-gray;
-            border-radius: 0px 8px 0px 0px;
-            border-right: 1px solid #1D1C1E;
-        
-            .sidebar-container{
-                img{
-                    margin-right: 8px;
-                }
-                a{
-                    transition: 0.2s;
-                }
-                a:hover{
-                    background-color: rgb(49, 49, 49);
-                    border-radius: 5px;
-                }
-                @include side-bar-container;
-                color: $white-color;
-                .logo-box{
-                    @include center-items;
-                    margin-bottom: 47px;
-                    gap:16px;
-                    h2{
-                        @include logo-text-format;
-                    }
+        background-color: $table-layer-gray;
+        border-radius: 0px 8px 0px 0px;
+        border-right: 1px solid #1D1C1E;
+
+        .sidebar-container {
+            @include for-size(mobile) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 12px;
+            }
+        }
+
+        img {
+            margin-right: 8px;
+        }
+
+        a {
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background-color: rgb(49, 49, 49);
+            border-radius: 5px;
+        }
+
+        @include side-bar-container;
+        color: $white-color;
+
+        .logo-box {
+            @include center-items;
+            margin-bottom: 47px;
+            gap: 16px;
+
+            @include for-size (mobile) {
+                margin-bottom: 0px;
+            }
+
+            h2 {
+                @include logo-text-format;
+            }
+        }
+
+        .general-part {
+            @include for-size(mobile) {
+                display: none
+            }
+
+            h4 {
+                @include sidebar-section-text-format;
+            }
+
+            .general-items {
+                @include sidebar-items-style;
+
+                a {
+                    @include side-bar-text-format;
                 }
 
-                .general-part{
-                    @include for-size(mobile){
-                        display: none
-                    }
-                    h4{
-                        @include sidebar-section-text-format;
-                    }
-                    .general-items{
-                        @include sidebar-items-style;
-                        
-                        a{
-                            @include side-bar-text-format;
-                        }
-                        .active {
-                            background-color: rgb(49, 49, 49);
-                            border-radius: 5px;
-                            cursor:context-menu;
-                        }
-                        
-                    }
+                .active {
+                    background-color: rgb(49, 49, 49);
+                    border-radius: 5px;
+                    cursor: context-menu;
                 }
-                .support-part{
-                    @include for-size(mobile){
-                        display: none
-                    }
-                    margin-top: 24px;
-                    .support-items{
-                        @include sidebar-items-style;
-                    }
-                    a{
-                        @include side-bar-text-format;
-                        
-                    }
-                    
-                    h4{
-                       @include sidebar-section-text-format;
-                    }
-                   
-                }
+
             }
+        }
+
+        .support-part {
+            @include for-size(mobile) {
+                display: none
+            }
+
+            margin-top: 24px;
+
+            .support-items {
+                @include sidebar-items-style;
+            }
+
+            a {
+                @include side-bar-text-format;
+
+            }
+
+            h4 {
+                @include sidebar-section-text-format;
+            }
+
+        }
     }
 }
