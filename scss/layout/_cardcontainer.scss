@@ -1,0 +1,8 @@
+.top-cards {
+    @include center-items;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 220px;
+    
+}
