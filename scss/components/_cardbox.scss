@@ -2,15 +2,32 @@
     display: flex;
     flex-direction: column;
     @include card-design;
+    transition: 0.3s;
+    width: 203px;
+    height: 196px;
+
+    @include for-size(tablet){
+       width: 165.6px;
+        height: 184px;
+    }
+    @include for-size (mobile){
+        width: 167.2px;
+        height: 184px;
+    }
 
     p {
-        @include center-items;
+        width: 107px;
+        height: 36px;
+        display: flex;
+        align-items: flex-start;
         
         @include card-header-text;
+
 
     }
 }
 header{
+    height: 36px;
    @include center-items;
    justify-content: space-around;
 }
