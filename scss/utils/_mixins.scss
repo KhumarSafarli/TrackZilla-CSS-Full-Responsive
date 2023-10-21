@@ -27,7 +27,7 @@
   width: 322px;
   height: 100%;
   padding: 40px 95px 607px 35px;
-  
+
 
   @include for-size(tablet) {
     width: 293px;
@@ -37,8 +37,8 @@
 
   @include for-size(mobile) {
     width: 100%;
-    height: 64px; 
-    flex-direction: row; 
+    height: 64px;
+    flex-direction: row;
     padding: 8px 12px;
 
   }
@@ -57,6 +57,7 @@
   line-height: 150%;
   text-decoration: none;
   padding: 8px 16px;
+  border: 1px solid transparent;
 }
 
 @mixin logo-text-format {
@@ -65,7 +66,8 @@
   font-weight: 700;
   line-height: normal;
 }
-@mixin sidebar-section-text-format{
+
+@mixin sidebar-section-text-format {
   font-size: 12px;
   font-weight: 700;
   line-height: 150%;
@@ -89,4 +91,44 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 150%;
+}
+
+@mixin topbar-logo-text {
+  color: $white-color;
+  font-size: 35.2px;
+  font-weight: 700;
+}
+
+@mixin topbar-icons-format {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@mixin notification-badge {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 100px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  top: -3px;
+  transform: translateX(80px);
+
+}
+
+@mixin card-design {
+  width: 203px;
+  height: 196px;
+  border-radius: 8px;
+  border: 1px solid #8D8D8D;
+  background: linear-gradient(104deg, rgba(255, 255, 255, 0.24) -4.12%, rgba(0, 0, 0, 0.00) 48.74%, rgba(255, 255, 255, 0.16) 97.56%);
+  backdrop-filter: blur(20px);
+  color: $white-color;
+  padding: 10px 16px;
 }
