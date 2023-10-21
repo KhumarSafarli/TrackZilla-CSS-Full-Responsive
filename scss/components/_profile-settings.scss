@@ -1,0 +1,18 @@
+#tracking-header {
+    .navbar {
+        .right-side {
+            a {
+                @include center-all-elements;
+                transition: 0.3s;
+            }
+
+            a:hover {
+                transform: scale(1.1)
+            }
+
+            .notification-badge {
+                @include notification-badge;
+            }
+        }
+    }
+}
