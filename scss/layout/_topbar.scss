@@ -1,0 +1,41 @@
+#tracking {
+
+    .tracking-header {
+        width: 100%;
+        height: 80px;
+        padding: 11px 16px;
+        display: flex;
+        justify-content: space-between;
+        @include for-size(tablet){
+            width: 901px;
+           }
+
+        .navbar {
+            width: 100%;
+            @include center-items;
+            justify-content: space-between;
+           position: sticky;
+           
+           
+
+            h1 {
+                @include topbar-logo-text;
+            }
+
+            .right-side {
+                @include topbar-icons-format;
+               a{
+                @include center-all-elements;
+                transition: 0.3s;
+               }
+               a:hover{
+                transform: scale(1.1)
+               }
+                .notification-badge {
+                  @include notification-badge;
+                }
+                
+               }
+            }
+        }
+    }
