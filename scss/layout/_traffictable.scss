@@ -1,0 +1,34 @@
+#traffic-table {
+    width: 100%;
+    height: 695px;
+
+    .table-container {
+        padding: 8px 16px;
+        height: 679px;
+        @include table-container-style;
+
+        p {
+            @include table-top-text;
+            margin-bottom: 10px;
+        }
+
+        .top-middle {
+            @include center-items;
+            justify-content: space-between;
+
+            h6 {
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                align-items: center;
+                
+            }
+            .reports{
+                @include center-items;
+                gap:16px;
+            }
+            
+        }
+    }
+}
