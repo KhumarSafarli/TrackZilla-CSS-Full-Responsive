@@ -31,7 +31,6 @@
                 }
             }
         }
-
         .tables {
             @include table-grid-template;
 
@@ -42,7 +41,6 @@
             }
 
         }
-
         .column {
             @include center-all-elements;
             flex-direction: column;
@@ -126,8 +124,6 @@
         h5 {
             @include center-items;
             @include dropdown-text-format;
-
-
         }
 
         h6 {
@@ -149,8 +145,6 @@
             transition: 0.2s;
         }
     }
-
-
     .dropdown-content {
         display: none;
         position: absolute;
@@ -161,7 +155,6 @@
         display: block;
         width: 100%;
         @include dropdown-box;
-
 
     }
 
