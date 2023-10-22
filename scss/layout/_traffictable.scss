@@ -8,11 +8,12 @@
         @include table-container-style;
 
         .tables {
-           @include table-grid-template;
-           @include for-size (tablet){
-            overflow: hidden;
-            overflow-x: scroll;
-           }
+            @include table-grid-template;
+
+            @include for-size (tablet) {
+                overflow: hidden;
+                overflow-x: scroll;
+            }
         }
 
         .column {
@@ -22,9 +23,10 @@
             gap: 4px;
 
             span {
-               @include span-table-template;
+                @include span-table-template;
             }
-            span:hover{
+
+            span:hover {
                 border-color: $green-logo;
             }
 
@@ -32,10 +34,11 @@
         }
 
         .column span:nth-child(odd) {
-            background-color:#101010;
-            color:$white-color;
+            background-color: #101010;
+            color: $white-color;
         }
-        .column span:nth-child(1){
+
+        .column span:nth-child(1) {
             color: $green-text;
             margin-bottom: 13px;
             background-color: #161616;
@@ -43,7 +46,7 @@
 
         .column span:nth-child(even) {
             background-color: #181818;
-            color:$white-color;
+            color: $white-color;
         }
     }
 
@@ -81,4 +84,62 @@
         }
 
     }
+
+    .table-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: center;
+
+        img {
+            margin-left: 8px;
+        }
+
+        h6,
+        h5 {
+            @include center-items;
+            @include dropdown-text-format;
+        }
+
+        h6 {
+            @include dropdown-box;
+            cursor: pointer;
+        }
+
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+
+        li {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        width: 100%;
+        @include dropdown-box;
+
+
+    }
+
+    .dropdown-content li:hover {
+        background-color: $green-logo;
+        cursor: pointer;
+
+    }
+
 }
