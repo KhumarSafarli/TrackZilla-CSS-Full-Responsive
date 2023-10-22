@@ -7,13 +7,40 @@
         height: 679px;
         @include table-container-style;
 
+        @include for-size(tablet) {
+            width: 868px;
+
+        }
+
+        @include for-size (mobile) {
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+        }
+
+        .top-middle {
+            width: 100%;
+
+            @include for-size(mobile) {
+                overflow: hidden;
+            }
+
+            .reports {
+                @include for-size(mobile) {
+                    display: none;
+                }
+            }
+        }
+
         .tables {
             @include table-grid-template;
 
-            @include for-size (tablet) {
-                overflow: hidden;
-                overflow-x: scroll;
+            @include for-size(tablet) {
+                
+                grid-template-columns: 40px 400px repeat(3, 122px);
+               
             }
+
         }
 
         .column {
@@ -99,6 +126,8 @@
         h5 {
             @include center-items;
             @include dropdown-text-format;
+
+
         }
 
         h6 {
