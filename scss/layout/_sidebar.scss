@@ -1,5 +1,6 @@
 #tracking {
     .sidebar {
+        position: sticky;
         .burger-menu {
             display: none;
 
@@ -33,15 +34,18 @@
         }
 
         a {
+           
+              @include side-bar-text-format;
+            
             transition: 0.2s;
         }
 
         a:hover {
             background-color: rgb(49, 49, 49);
             border-radius: 5px;
+            border: 1px solid $green-text;
         }
 
-        @include side-bar-container;
         color: $white-color;
 
         .logo-box {
@@ -70,9 +74,7 @@
             .general-items {
                 @include sidebar-items-style;
 
-                a {
-                    @include side-bar-text-format;
-                }
+               
 
                 .active {
                     background-color: rgb(49, 49, 49);
@@ -94,10 +96,7 @@
                 @include sidebar-items-style;
             }
 
-            a {
-                @include side-bar-text-format;
-
-            }
+            
 
             h4 {
                 @include sidebar-section-text-format;

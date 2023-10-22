@@ -5,10 +5,14 @@
         height: 80px;
         padding: 11px 16px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        @include for-size(tablet){
-            width: 901px;
-           }
+        gap:10px;
+
+        @include for-size(mobile){
+            padding: 11px 0px 11px 16px;
+        }
+      
 
         .navbar {
             width: 100%;
@@ -23,6 +27,9 @@
             }
 
             .right-side {
+                @include for-size (mobile){
+                    display: none
+                }
                 @include topbar-icons-format;
                a{
                 @include center-all-elements;

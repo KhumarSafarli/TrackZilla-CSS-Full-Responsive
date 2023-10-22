@@ -6,7 +6,7 @@ $gradient-color: linear-gradient(104deg, rgba(255, 255, 255, 0.24) -4.12%, rgba(
 $table-layer-black:#101010;
 $table-layer-gray:#181818;
 $border-color:rgba(255, 255, 255, 0.05);
-
+$sidebar-background-color:linear-gradient(173deg, #151312 29.79%, #29262C 107.6%), url(<path-to-image>), lightgray 0% 0% / 83.07999968528748px 83.07999968528748px repeat, linear-gradient(111deg, rgba(255, 255, 255, 0.24) 15.49%, rgba(255, 255, 255, 0.10) 69.19%, rgba(255, 255, 255, 0.03) 116.32%);
 
 $desktop-container-width: 1440px;
 $tablet-container-width: 1194px;

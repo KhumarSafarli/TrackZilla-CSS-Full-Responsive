@@ -159,7 +159,7 @@
   grid-template-columns: 40px 400px repeat(3, 185.6px);
   padding: 10px 0px;
   grid-template-rows: auto;
-  grid-gap: 10px 13px;
+  grid-gap: 4px 10px;
   justify-content: start;
   align-items: center;
 }
@@ -181,4 +181,25 @@
   line-height: 150%;
   align-items: center;
 
+}
+
+@mixin dropdown-box {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(104deg, rgba(255, 255, 255, 0.24) -4.12%, rgba(0, 0, 0, 0.00) 48.74%, rgba(255, 255, 255, 0.16) 97.56%);
+}
+
+@mixin dropdown-text-format {
+  color: $white-color;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+@mixin footer-text-style {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: $white-color;
+  font-weight: 400;
 }

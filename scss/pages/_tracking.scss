@@ -10,13 +10,18 @@
 
   @include for-size (tablet) {
     background-image: url("../../assets/background/bg-tablet.png");
+
   }
 
   @include for-size (mobile) {
     background-image: url("../../assets/background/bg-mobile.png");
     height: 100vh;
+    background-repeat: repeat;
     flex-direction: column;
 
   }
-  
+
+  .main-page {
+    width: 100%;
+  }
 }
