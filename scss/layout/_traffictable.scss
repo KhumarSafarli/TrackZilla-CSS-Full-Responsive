@@ -7,9 +7,12 @@
         height: 679px;
         @include table-container-style;
 
-
         .tables {
            @include table-grid-template;
+           @include for-size (tablet){
+            overflow: hidden;
+            overflow-x: scroll;
+           }
         }
 
         .column {
@@ -17,8 +20,6 @@
             flex-direction: column;
             text-align: start;
             gap: 4px;
-
-
 
             span {
                @include span-table-template;
@@ -64,11 +65,7 @@
         justify-content: space-between;
 
         h6 {
-            color: $white-color;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 150%;
-            align-items: center;
+            @include report-text;
 
         }
 
