@@ -7,28 +7,81 @@
         height: 679px;
         @include table-container-style;
 
-        p {
-            @include table-top-text;
-            margin-bottom: 10px;
+
+        .tables {
+           @include table-grid-template;
         }
 
-        .top-middle {
+        .column {
+            @include center-all-elements;
+            flex-direction: column;
+            text-align: start;
+            gap: 4px;
+
+
+
+            span {
+               @include span-table-template;
+            }
+            span:hover{
+                border-color: $green-logo;
+            }
+
+
+        }
+
+        .column span:nth-child(odd) {
+            background-color:#101010;
+            color:$white-color;
+        }
+        .column span:nth-child(1){
+            color: $green-text;
+            margin-bottom: 13px;
+            background-color: #161616;
+        }
+
+        .column span:nth-child(even) {
+            background-color: #181818;
+            color:$white-color;
+        }
+    }
+
+    .line-border {
+        width: 100%;
+        opacity: 0.26;
+        color: #E9ECEF;
+        border: 0.5px solid;
+        margin-top: 13px;
+    }
+
+    p {
+        @include table-top-text;
+        margin-bottom: 10px;
+    }
+
+    .top-middle {
+        @include center-items;
+        justify-content: space-between;
+
+        h6 {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            align-items: center;
+
+        }
+
+        .reports {
             @include center-items;
-            justify-content: space-between;
-
-            h6 {
-                color: $white-color;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 150%;
-                align-items: center;
-                
-            }
-            .reports{
-                @include center-items;
-                gap:16px;
-            }
-            
+            gap: 16px;
+            cursor: pointer;
+            transition: 0.4s;
         }
+
+        :hover {
+            color: $green-logo
+        }
+
     }
 }
