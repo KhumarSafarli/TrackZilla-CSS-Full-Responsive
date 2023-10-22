@@ -10,7 +10,7 @@
 
   @include for-size (tablet) {
     background-image: url("../../assets/background/bg-tablet.png");
-
+    background-repeat: repeat;
   }
 
   @include for-size (mobile) {
